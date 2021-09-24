@@ -1,8 +1,5 @@
 package com.h0tk3y.spbsu.kotlin.course.lesson1
 
-import kotlin.math.max
-import kotlin.math.min
-
 /*
  * Реализуйте функцию intersectRanges, возвращающую диапазон, являющийся пересечением двух
  * данных целочисленных диапазонов. Если данные диапазоны не пересекаются, возвращайте null.
@@ -15,7 +12,7 @@ import kotlin.math.min
 fun intersectRanges(rangeA: IntRange, rangeB: IntRange): IntRange? {
     if (rangeA.last < rangeB.first || rangeB.last < rangeA.first)
         return null
-    return max(rangeA.first, rangeB.first).rangeTo(min(rangeB.last, rangeA.last))
+    return maxOf(rangeA.first, rangeB.first).rangeTo(minOf(rangeB.last, rangeA.last))
 }
 
 /*
@@ -29,22 +26,24 @@ fun intersectRanges(rangeA: IntRange, rangeB: IntRange): IntRange? {
  */
 fun cut(outerRange: IntRange, cutout: IntRange): List<IntRange> {
     val result = mutableListOf<IntRange>()
-    val intersection = intersectRanges(outerRange, cutout)
-    if (intersection != null) {
-        if ((intersection.first == outerRange.first) && (intersection.last == outerRange.last))
-            return result
-        if (intersection.first == outerRange.first) {
-            result.add((intersection.last + 1).rangeTo(outerRange.last))
-            return result
-        }
-        if (intersection.last == outerRange.last) {
-            result.add(outerRange.first until intersection.first)
-            return result
-        }
-        result.add(outerRange.first.rangeTo(intersection.first))
-        result.add((intersection.last + 1).rangeTo(outerRange.last))
+    val intersection : IntRange = intersectRanges(outerRange, cutout) ?: outerRange.first - 1 until outerRange.first;
+    if (intersection.first == outerRange.first - 1) {
+        result.add(outerRange)
         return result
     }
-    result.add(outerRange)
-    return result
+    val check1: Int = if (intersection.first == outerRange.first) {1} else {0}
+    val check2: Int = if (intersection.last == outerRange.last) {10} else {100}
+    when(check1 + check2) {
+        101 -> {
+            result.add(intersection.last + 1 .. outerRange.last)
+        }
+        10 -> {
+            result.add(outerRange.first until intersection.first)
+        }
+        100 -> {
+            result.add(outerRange.first .. intersection.first)
+            result.add(intersection.last + 1 .. outerRange.last)
+        }
+    }
+    return  result
 }

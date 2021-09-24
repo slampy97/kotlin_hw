@@ -1,6 +1,5 @@
 package com.h0tk3y.spbsu.kotlin.course.lesson1
 
-import java.lang.RuntimeException
 import kotlin.math.sign
 
 /*
@@ -10,6 +9,5 @@ import kotlin.math.sign
 fun factorial(n: Int): Int = when (n.sign) {
     -1 -> -1
     1 -> (1..n).reduce { acc, i -> i * acc }
-    0 -> 1
-    else -> throw RuntimeException("It is impossible!")
+    else -> 1
 }

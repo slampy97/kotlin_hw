@@ -4,23 +4,23 @@ files:
   visible: true
   placeholders:
   - offset: 589
-    length: 43
+    length: 202
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 589
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: /* добавьте три параметра */
-  - offset: 956
-    length: 0
+  - offset: 751
+    length: 47
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 607
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: TODO()
   text: |-
@@ -95,5 +95,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Wed, 22 Sep 2021 02:08:55 UTC
+  time: Fri, 24 Sep 2021 15:35:37 UTC
 record: -1

@@ -40,23 +40,23 @@ files:
   visible: true
   placeholders:
   - offset: 20
-    length: 29
+    length: 25
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 20
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: '""'
-  - offset: 70
-    length: 5
+  - offset: 66
+    length: 9
     placeholder_text: type here
     initial_state:
       length: 9
       offset: 50
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Solved
     encrypted_possible_answer: '""'
   text: |-
@@ -87,5 +87,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Wed, 22 Sep 2021 02:46:11 UTC
+  time: Fri, 24 Sep 2021 16:04:09 UTC
 record: -1

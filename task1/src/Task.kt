@@ -20,8 +20,6 @@ fun main(args: Array<String>) {
         greet("world")
     }
     else {
-        for (arg in args) {
-            greet(arg)
-        }
+        args.forEach { arg -> greet(arg) }
     }
 }

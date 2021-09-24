@@ -10,24 +10,14 @@ package com.h0tk3y.spbsu.kotlin.course.lesson1
  * Целочисленное переполнение игнорируйте.
  */
 fun fibonacci(n: Int, first: Int = 1, second: Int = first): Int {
-    var pred = first
-    var cur = second
     if (n < 1)
         return -1
     return when (n) {
         1 -> first
         2 -> second
-        else -> {
-            repeat(n - 1) {
-                val tmp = pred
-                pred = cur
-                cur += tmp
-            }
-            pred
-        }
+        else -> fibonacci(n - 1, second, second + first)
     }
 }
-
 /*
  * Функцию должно быть можно вызывать следующими способами:
  * `fibonacci(42)`

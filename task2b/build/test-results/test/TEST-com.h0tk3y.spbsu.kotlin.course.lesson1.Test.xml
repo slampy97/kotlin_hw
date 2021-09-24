@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.h0tk3y.spbsu.kotlin.course.lesson1.Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-22T02:08:55" hostname="MSI" time="0.026">
+<testsuite name="com.h0tk3y.spbsu.kotlin.course.lesson1.Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-24T15:35:36" hostname="MSI" time="0.029">
   <properties/>
-  <testcase name="testFibonacci" classname="com.h0tk3y.spbsu.kotlin.course.lesson1.Test" time="0.026"/>
+  <testcase name="testFibonacci" classname="com.h0tk3y.spbsu.kotlin.course.lesson1.Test" time="0.029"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

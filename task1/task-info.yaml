@@ -53,7 +53,7 @@ files:
   visible: true
   placeholders:
   - offset: 239
-    length: 26
+    length: 24
     placeholder_text: type here
     initial_state:
       length: 9
@@ -62,8 +62,8 @@ files:
     selected: true
     status: Solved
     encrypted_possible_answer: TODO()
-  - offset: 575
-    length: 62
+  - offset: 509
+    length: 110
     placeholder_text: type here
     initial_state:
       length: 9
@@ -97,5 +97,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Wed, 22 Sep 2021 01:11:31 UTC
+  time: Fri, 24 Sep 2021 15:30:42 UTC
 record: -1
